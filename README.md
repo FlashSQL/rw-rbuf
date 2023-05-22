@@ -1,5 +1,9 @@
 # RW and R-Buf
 
+## Publication
+- Mijin An, Soojun Im, Dawoon Jung, Sang-Won Lee, "Your Read is Our Priority in Flash Storage", VLDB'22, Sydney, September 2022
+- [Paper Link](https://dl.acm.org/doi/10.14778/3538598.3538612)
+
 ## RW interface for MySQL
 
 **RW** is **an intuitive and explicit storage command to address read stalls**. Upon read stall, both read and write can be requested to the flash storage in a single call. And the read can be processed as soon as the dirty page is copied to the storage buffer cache using DMA, without waiting for the NAND write to finish. By replacing two I/O calls for write and read upon read stalls with one call, RW can simplify the structure of the buffer manager in DBMS and reduce the number of I/O interrupts and consequently the number of context switches.
